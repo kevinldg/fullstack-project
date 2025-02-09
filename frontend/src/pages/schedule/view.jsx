@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {fetchSchedule} from "../../services/scheduleService.js";
+import Schedule from "../../components/Schedule.jsx";
 
 const loadSchedule = async (setSchedule, setLoading, setError) => {
     try {
@@ -24,5 +25,14 @@ export default function ViewSchedule() {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>{error}</p>;
 
-    return <pre>{JSON.stringify(schedule, null, 2)}</pre>;
+    return (
+        <div className="p-4 flex flex-col gap-4">
+            <h1 className="text-xl font-bold">Schedule</h1>
+            <ul>
+                {schedule.map(scheduleEntry => (
+                    <Schedule key={scheduleEntry.id} date={scheduleEntry.date} topic={scheduleEntry.topic} />
+                ))}
+            </ul>
+        </div>
+    );
 }
