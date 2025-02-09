@@ -2,7 +2,7 @@
 
 1. `git clone https://github.com/kevinldg/fullstack-project.git` Clone the repository
 2. `spring.data.mongodb.uri=` Set the MongoDB URI in /backend/src/main/resources/application.properties
-3. `mvm clean compile package` Run the Maven lifecycles in /backend
+3. `mvn clean compile package` Run the Maven lifecycles in /backend
 4. `npm install` Install the NPM dependencies in /frontend
 
 ## For IntelliJ IDEA
