@@ -5,7 +5,7 @@ export default function Bookmark({id, name, url, favicon}) {
                 <img src={favicon} alt={id} width={32} height={32} />
                 <p>{name}</p>
             </div>
-            <a className="underline text-blue-600" href={url}>Link</a>
+            <a className="underline text-blue-600 w-fit" href={url}>Link</a>
         </div>
     );
 }

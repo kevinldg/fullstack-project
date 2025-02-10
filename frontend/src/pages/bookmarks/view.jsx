@@ -38,6 +38,7 @@ export default function ViewBookmarks() {
                     />
                 ))}
             </div>
+            <a href="/bookmarks/add" className="w-32 p-2 border-black border text-center hover:bg-neutral-100">Add Bookmark</a>
         </div>
     );
 }
