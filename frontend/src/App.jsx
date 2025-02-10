@@ -2,6 +2,7 @@ import {Route, Routes} from "react-router-dom";
 import ViewBookmarks from "./pages/bookmarks/view.jsx";
 import Home from "./pages/index.jsx";
 import ViewSchedule from "./pages/./schedule/view.jsx";
+import AddBookmarkPage from "./pages/bookmarks/add.jsx";
 
 export default function App() {
 
@@ -14,6 +15,7 @@ export default function App() {
                 {/* Bookmarks */}
                 <Route path="/bookmarks">
                     <Route index element={<ViewBookmarks/>} />
+                    <Route path="add" element={<AddBookmarkPage/>} />
                 </Route>
             </Routes>
         </>
