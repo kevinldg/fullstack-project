@@ -5,6 +5,7 @@ import ViewSchedule from "./pages/./schedule/view.jsx";
 import AddBookmarkPage from "./pages/bookmarks/add.jsx";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faHouse} from "@fortawesome/free-solid-svg-icons/faHouse";
+import ChatView from "./pages/chat/view.jsx";
 
 export default function App() {
 
@@ -24,6 +25,8 @@ export default function App() {
                     <Route index element={<ViewBookmarks/>} />
                     <Route path="add" element={<AddBookmarkPage/>} />
                 </Route>
+                {/* Chat */}
+                <Route path="/chat" element={<ChatView/>} />
             </Routes>
         </>
     );
